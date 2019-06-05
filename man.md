@@ -23,17 +23,17 @@ Move the FILE(s) to the XDG trash directory.
 #### rm-compatible options
 
 -f, --force
-    ignore nonexistent files, never prompt 
+* ignore nonexistent files, never prompt 
 -i
-    prompt before every removal 
+* prompt before every removal 
 -I
-    prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes 
+* prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes 
 --interactive[=WHEN]
-    prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompt always 
+* prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompt always 
 --one-file-system
-    when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument 
+* when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument 
 --no-preserve-root
-    do not treat '/' specially 
+* do not treat '/' specially 
 --preserve-root
     do not trash '/' (default) 
 -r, -R, --recursive
