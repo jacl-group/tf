@@ -49,6 +49,7 @@ By default, tf does not trash directories. Use the `--recursive` (`-r` or `-R`) 
 To trash a file whose name starts with a `-`, for example `-foo`, use one of these commands:
 
 `tf -- -foo`
+
 `tf ./-foo`
 
 
