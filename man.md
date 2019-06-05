@@ -1,23 +1,23 @@
-# man mm
+# man tf
 
 ### Name
-mm remove files or directories
+tf remove files or directories
 
 ### Synopsis
 
-rm [OPTION]… FILE…
+tf [OPTION]… FILE…
 ### Description
 
 ## man rm
-rm - remove files or directories
+tf - remove files or directories
 Synopsis
-rm [OPTION]... FILE...
-Description
-This manual page documents the GNU version of rm. rm removes each specified file. By default, it does not remove directories.
+tf [OPTION]... FILE...
+### Description
+This manual page documents the GNU version of tf. tf removes each specified file. By default, it does not remove directories.
 
-If the -I or --interactive=once option is given, and there are more than three files or the -r, -R, or --recursive are given, then rm prompts the user for whether to proceed with the entire operation. If the response is not affirmative, the entire command is aborted.
+If the -I or --interactive=once option is given, and there are more than three files or the -r, -R, or --recursive are given, then tf prompts the user for whether to proceed with the entire operation. If the response is not affirmative, the entire command is aborted.
 
-Otherwise, if a file is unwritable, standard input is a terminal, and the -f or --force option is not given, or the -i or --interactive=always option is given, rm prompts the user for whether to remove the file. If the response is not affirmative, the file is skipped.
+Otherwise, if a file is unwritable, standard input is a terminal, and the -f or --force option is not given, or the -i or --interactive=always option is given, tf prompts the user for whether to remove the file. If the response is not affirmative, the file is skipped.
 
 ### Options
 
@@ -46,18 +46,18 @@ Remove (unlink) the FILE(s).
 --version
     output version information and exit
 
-By default, rm does not remove directories. Use the --recursive (-r or -R) option to remove each listed directory, too, along with all of its contents.
+By default, tf does not remove directories. Use the --recursive (-r or -R) option to remove each listed directory, too, along with all of its contents.
 
 To remove a file whose name starts with a '-', for example '-foo', use one of these commands:
 
-rm -- -foo
-rm ./-foo
+tf -- -foo
+tf ./-foo
 
 ### Author
 Written by Cassie E. Nicol, and Alexandria Pettit
 
 ### Report Bugs
-Report mm bugs to cassieenicol@gmail.com
+Report tf bugs to cassieenicol@gmail.com
 
 ### Copyright
 Copyright Â© 2010 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
