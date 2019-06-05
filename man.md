@@ -12,9 +12,9 @@ tf [OPTION]… FILE…
 
 tf trashes each specified file or directory (moves to XDG trashcan). By default, it does not trash directories.
 
-If the -I or --interactive=once option is given, and there are more than three files or the -r, -R, or --recursive are given, then tf prompts the user for whether to proceed with the entire operation. If the response is not affirmative, the entire command is aborted.
+If the `-I` or `--interactive=once` option is given, and there are more than three files or the `-r`, `-R`, or `--recursive` are given, then tf prompts the user for whether to proceed with the entire operation. If the response is not affirmative, the entire command is aborted.
 
-Otherwise, if a file is unwritable, standard input is a terminal, and the -f or --force option is not given, or the -i or --interactive=always option is given, tf prompts the user for whether to trash the file. If the response is not affirmative, the file is skipped.
+Otherwise, if a file is unwritable, standard input is a terminal, and the `-f` or `--force` option is not given, or the `-i` or `--interactive=always` option is given, tf prompts the user for whether to trash the file. If the response is not affirmative, the file is skipped.
 
 ### Options
 
@@ -27,7 +27,7 @@ Move the FILE(s) to the XDG trash directory.
 * -i
     * prompt before every removal 
 * -I
-    * prompt once before trashing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes 
+    * prompt once before trashing more than three files, or when removing recursively. Less intrusive than `-i`, while still giving protection against most mistakes 
 * --interactive[=WHEN]
 prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompt always 
 * --one-file-system
@@ -44,7 +44,7 @@ prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompt
     * display this help and exit 
 * --version
 
-By default, tf does not trash directories. Use the --recursive (-r or -R) option to trash each listed directory, too, along with all of its contents.
+By default, tf does not trash directories. Use the `--recursive` (`-r` or `-R`) option to trash each listed directory, too, along with all of its contents.
 
 To trash a file whose name starts with a `-`, for example `-foo`, use one of these commands:
 
