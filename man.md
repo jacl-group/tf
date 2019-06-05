@@ -43,6 +43,7 @@ Move the FILE(s) to the XDG trash directory.
 --help
     display this help and exit 
 --version
+
     output version information and exit
 
 By default, tf does not trash directories. Use the --recursive (-r or -R) option to trash each listed directory, too, along with all of its contents.
