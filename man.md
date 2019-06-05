@@ -64,8 +64,9 @@ To trash a file whose name starts with a `-`, for example `-foo`, use one of the
     * Undo last file(s) that were trashed.
 
 ### Contributions
-Alexandria P. (author)
-Cassie E. Nicol (author)
+
+* Alexandria P. (author)
+* Cassie E. Nicol (author)
 
 ### Report Bugs
 Report tf bugs to cassieenicol@gmail.com (Cassie) or alxpettit@gmail.com (Alexandria).
