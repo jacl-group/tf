@@ -22,36 +22,34 @@ Move the FILE(s) to the XDG trash directory.
 
 #### rm-compatible options
 
--f, --force
-ignore nonexistent files, never prompt 
--i
-prompt before every removal 
--I
-prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes 
---interactive[=WHEN]
+* -f, --force
+    * ignore nonexistent files, never prompt 
+* -i
+    * prompt before every removal 
+* -I
+    * prompt once before trashing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes 
+* --interactive[=WHEN]
 prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompt always 
---one-file-system
-when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument 
---no-preserve-root
-do not treat '/' specially 
---preserve-root
-    do not trash '/' (default) 
--r, -R, --recursive
-    trash directories and their contents recursively 
--v, --verbose
-    explain what is being done 
---help
-    display this help and exit 
---version
-
-    output version information and exit
+* --one-file-system
+    * when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument 
+* --no-preserve-root
+    * do not treat '/' specially 
+*   --preserve-root
+    * do not trash '/' (default) 
+* -r, -R, --recursive
+    * trash directories and their contents recursively 
+* -v, --verbose
+    * explain what is being done 
+* --help
+    * display this help and exit 
+* --version
 
 By default, tf does not trash directories. Use the --recursive (-r or -R) option to trash each listed directory, too, along with all of its contents.
 
-To trash a file whose name starts with a '-', for example '-foo', use one of these commands:
+To trash a file whose name starts with a `-`, for example `-foo`, use one of these commands:
 
-tf -- -foo
-tf ./-foo
+`tf -- -foo`
+`tf ./-foo`
 
 
 #### tf-specific options
