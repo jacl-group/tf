@@ -16,6 +16,6 @@ message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
 
 file(GLOB SOURCES "src/*.cpp")
 
-add_executable(tf ${SOURCES} src/TfOptions.cpp include/TfOptions.hpp)
+add_executable(tf ${SOURCES} src/TfOptions.cpp include/TfOptions.hpp src/Utils.cpp include/Utils.hpp src/BoostParser.cpp include/BoostParser.hpp)
 
 target_link_libraries(tf Boost::program_options)

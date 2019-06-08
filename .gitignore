@@ -33,3 +33,7 @@
 
 # emacs backup file
 *~
+
+# Ignore CLion stuff
+*.idea/*
+cmake-build-debug/*
