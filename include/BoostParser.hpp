@@ -5,9 +5,9 @@
 #ifndef TRASH_FILE_BOOSTPARSER_HPP
 #define TRASH_FILE_BOOSTPARSER_HPP
 
-#include <include/TfOptions.hpp>
+#include <TfOptions.hpp>
 
-#include <include/TfOptions.hpp>
+#include <TfOptions.hpp>
 
 void parseCommandLine(int ac, char** av, TfOptions& options);
 

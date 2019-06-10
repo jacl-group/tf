@@ -8,6 +8,7 @@
 #include <string>
 
 class TfOptions {
+
 public:
     bool help;
     bool version;

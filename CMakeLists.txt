@@ -9,13 +9,14 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 #TARGET_LINK_LIBRARIES( anyExecutable LINK_PUBLIC ${Boost_LIBRARIES} )
 
 # Include Boost as an imported target
-find_package(Boost 1.65 COMPONENTS program_options REQUIRED)
+find_package(Boost 1.65 COMPONENTS program_options unit_test_framework REQUIRED)
 add_library(boost INTERFACE IMPORTED)
 set_property(TARGET boost PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR})
 message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
 
-file(GLOB SOURCES "src/*.cpp")
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
-add_executable(tf ${SOURCES} src/TfOptions.cpp include/TfOptions.hpp src/Utils.cpp include/Utils.hpp src/BoostParser.cpp include/BoostParser.hpp)
 
-target_link_libraries(tf Boost::program_options)
+add_subdirectory(app)
+add_subdirectory(TfUtils)
+add_subdirectory(test)

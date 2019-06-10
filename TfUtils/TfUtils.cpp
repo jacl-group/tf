@@ -2,7 +2,7 @@
 // Created by cenicol on 6/8/19.
 //
 
-#include "include/Utils.hpp"
+#include "TfUtils.hpp"
 
 #include <iostream>
 #include <string>
@@ -28,7 +28,7 @@ assurance that the contents are truly unrecoverable, consider using shred.
 )END"
     };
     cout << "Usage: tf [OPTION]... [FILE]...\n"
-         << "Move the FILE(s) to the trash.\n\n";
+         << "Move the FILE(s) to the trash.\n";
     cout << options.desc << "\n";
     //cout << example;
 }

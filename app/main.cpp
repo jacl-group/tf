@@ -1,9 +1,9 @@
 
 #include <iostream>
 #include <boost/program_options.hpp>
-#include <include/TfOptions.hpp>
-#include <include/BoostParser.hpp>
-#include <include/Utils.hpp>
+#include <TfOptions.hpp>
+#include <BoostParser.hpp>
+#include <TfUtils.hpp>
 
 namespace po = boost::program_options;
 

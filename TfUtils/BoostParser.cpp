@@ -2,7 +2,7 @@
 // Created by cenicol on 6/8/19.
 //
 
-#include "include/BoostParser.hpp"
+#include "BoostParser.hpp"
 
 #include <iostream>
 #include <vector>
@@ -18,8 +18,8 @@ void parseCommandLine(int ac, char** av, TfOptions& options) {
     po::options_description desc("Allowed options");
     desc.add_options()
             ("force,f", "ignore nonexistent files, never prompt")
-            ("i", "prompt before every removal")
-            ("I",
+            (",i", "prompt before every removal")
+            (",I",
              "prompt once before removing more than three files, or when removing recursively; less intrusive than -i while still giving protection against most mistakes")
             ("interactive", "prompt according to WHEN: never, once (-I), or always (-i); without WHEN, prompt always")
             ("one-file-system",
