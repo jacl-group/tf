@@ -5,7 +5,7 @@
 #
 
 message("CMAKE_ROOT: ${CMAKE_ROOT}")
-MESSAGE("CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
+message("CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
 
 # Collect using glob the source files
 file(GLOB SOURCES "*.cpp")

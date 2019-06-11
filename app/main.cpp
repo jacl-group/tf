@@ -15,8 +15,9 @@ int main(int ac, char** av)
     // Results from Command Line Parsing
     TfOptions options;
 
+    BoostParser parser;
     try {
-        parseCommandLine(ac, av, options);
+        parser.parse(ac, av, options);
     } catch(const boost::program_options::unknown_option& e) {
         cerr << "Unknown Option: " << e.get_option_name() << endl;
     } catch(const boost::program_options::multiple_occurrences& e) {
