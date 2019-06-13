@@ -5,7 +5,7 @@
 #ifndef TRASH_FILE_UTILS_HPP
 #define TRASH_FILE_UTILS_HPP
 
-#include <TfOptions.hpp>
+#include "../../../TfTools/include/TfUtils/TfOptions.hpp"
 
 void help(const TfOptions& options);
 void version();

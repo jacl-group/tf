@@ -4,8 +4,8 @@
 
 #include <iostream>
 
-#include <TfOptions.hpp>
-#include <BoostParser.hpp>
+#include "../TfTools/include/TfUtils/TfOptions.hpp"
+#include "../TfUtils/include/TfUtils/BoostParser.hpp"
 
 // Use unit tests .so library
 // and
@@ -26,7 +26,7 @@ BOOST_AUTO_TEST_CASE( options_test_empty )
 {
     TfOptions options;
 
-    // Ensure the unset options are set to their defaults. 
+    // Ensure the unset options are set to their defaults.
     BOOST_CHECK(options.help == false);
     BOOST_CHECK(options.version == false);
     BOOST_CHECK(options.desc.empty());
@@ -58,6 +58,14 @@ BOOST_AUTO_TEST_CASE( options_test_help )
     BOOST_CHECK(options.desc == parser.getDesc());
 }
 
+char** setAv2(char** av, const char * opt)
+{
+    static char * av0 = (char*) "tf";
+    av[0] = av0;
+    av[1] = (char*) opt;
+    return av;
+}
+
 //
 // Test case: tf --verbose
 //
@@ -67,9 +75,8 @@ BOOST_AUTO_TEST_CASE( options_test_version )
 
     // Build the command line.
     int ac = 2;
-    char * av0 = (char*) "tf";
-    char * av1 = (char*) "--version";
-    char * av[2] {av0, av1};
+    char * av[2];
+    setAv2(av, "--version");
 
     // Parse the command line.
     BoostParser parser;
@@ -84,3 +91,6 @@ BOOST_AUTO_TEST_CASE( options_test_version )
     BOOST_CHECK(options.desc == parser.getDesc());
 }
 
+//
+// Test unknown short option
+//

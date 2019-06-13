@@ -2,7 +2,7 @@
 // Created by cenicol on 6/8/19.
 //
 
-#include "TfOptions.hpp"
+#include "../include/TfUtils/TfOptions.hpp"
 
 TfOptions::TfOptions() :
     help(false),

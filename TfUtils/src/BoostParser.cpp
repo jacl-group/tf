@@ -2,7 +2,7 @@
 // Created by cenicol on 6/8/19.
 //
 
-#include "BoostParser.hpp"
+#include "include/TfUtils/BoostParser.hpp"
 
 #include <iostream>
 #include <vector>
@@ -15,11 +15,14 @@ using namespace std;
 
 boost::program_options::options_description BoostParser::desc_("Allowed options");
 
+//
 BoostParser::BoostParser()
 {
+    // The (options_description) desc class is a static instance.
+    // It needs to be set only once for all instances of BoostParser.
+    // I check to see if the container is empty() to determine if it needs to be set.
     if(desc_.options().empty()) {
         // Declare the supported options.
-        //po::options_description desc("Allowed options");
         desc_.add_options()
                 ("force,f", "ignore nonexistent files, never prompt")
                 (",i", "prompt before every removal")
@@ -39,6 +42,8 @@ BoostParser::BoostParser()
 
 }
 
+// getDesc() is a convienance method which provides the description string output from
+// options_description.
 string BoostParser::getDesc() const
 {
     ostringstream oss;
@@ -46,12 +51,12 @@ string BoostParser::getDesc() const
     return oss.str();
 }
 
+// parse() parsed the command line from main() and stores the results into options.
+//
 void BoostParser::parse(int ac, char** av, TfOptions& options) {
-#if 0
+#if 1
     cout << "ac: " << ac << endl;
-    char ** start = av;
-    char ** end = av+ac;
-    for(char** p=start; p < end; ++p) {
+    for(char** p=av; p < (av+ac); ++p) {
         cout << "\t" << *p << endl;
     }
 #endif

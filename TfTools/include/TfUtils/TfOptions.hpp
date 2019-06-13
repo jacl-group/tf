@@ -7,6 +7,9 @@
 
 #include <string>
 
+// @class TfOptions
+// Provides storage for command line options.
+//
 class TfOptions {
 
 public:
@@ -15,7 +18,6 @@ public:
     std::string desc;
 
     TfOptions();
-
 };
 
 
