@@ -10,17 +10,6 @@ add_library(boost INTERFACE IMPORTED)
 set_property(TARGET boost PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR})
 message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
-
-# Collect using glob the source files
-#file(GLOB SOURCES "src/*.cpp")
-
-# Define an executable
-#add_executable(tf ${SOURCES})
-
-# Define the libraries this project depends upon
-#target_link_libraries(tf TfUtilsLib Boost::program_options)
-
 add_subdirectory(TfUtils)
 add_subdirectory(TfTools)
 add_subdirectory(app)
