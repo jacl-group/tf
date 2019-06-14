@@ -2,16 +2,17 @@
 // Created by cenicol on 6/8/19.
 //
 
-#include "include/TfUtils/TfUtils.hpp"
+#include <TfUtils/TfUtils.hpp>
+#include <TfTools/TfOptions.hpp>
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-void help(const TfOptions& options) {
-    string example {
-            R"END(
+const string& getHelpExample()
+{
+    static string example {R"END(
 By default, rm does not remove directories.  Use the --recursive (-r or -R)
 option to remove each listed directory, too, along with all of its contents.
 
@@ -27,10 +28,17 @@ assurance that the contents are truly unrecoverable, consider using shred.
 
 )END"
     };
+
+    return example;
+}
+
+void help(const TfOptions& options) {
+    string example {
+    };
     cout << "Usage: tf [OPTION]... [FILE]...\n"
          << "Move the FILE(s) to the trash.\n";
     cout << options.desc << "\n";
-    //cout << example;
+    cout << getHelpExample();
 }
 
 void version() {

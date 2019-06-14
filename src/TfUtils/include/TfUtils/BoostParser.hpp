@@ -5,9 +5,7 @@
 #ifndef TRASH_FILE_BOOSTPARSER_HPP
 #define TRASH_FILE_BOOSTPARSER_HPP
 
-#include "../../../TfTools/include/TfUtils/TfOptions.hpp"
-
-#include "../../../TfTools/include/TfUtils/TfOptions.hpp"
+#include <TfTools/TfOptions.hpp>
 
 namespace boost {
     namespace program_options {

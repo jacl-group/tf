@@ -4,10 +4,6 @@ project(trash_file)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-#FIND_PACKAGE( Boost 1.40 COMPONENTS program_options REQUIRED )
-#INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
-#TARGET_LINK_LIBRARIES( anyExecutable LINK_PUBLIC ${Boost_LIBRARIES} )
-
 # Include Boost as an imported target
 find_package(Boost 1.65 COMPONENTS program_options unit_test_framework REQUIRED)
 add_library(boost INTERFACE IMPORTED)
@@ -16,8 +12,16 @@ message("Boost_LIBRARIES: ${Boost_LIBRARIES}")
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
+# Collect using glob the source files
+#file(GLOB SOURCES "src/*.cpp")
 
-add_subdirectory(app)
+# Define an executable
+#add_executable(tf ${SOURCES})
+
+# Define the libraries this project depends upon
+#target_link_libraries(tf TfUtilsLib Boost::program_options)
+
 add_subdirectory(TfUtils)
-add_subdirectory(test)
 add_subdirectory(TfTools)
+add_subdirectory(app)
+add_subdirectory(test)
