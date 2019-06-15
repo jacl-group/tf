@@ -13,6 +13,6 @@ file(GLOB SOURCES "*.cpp")
 # Parser Unit Test
 add_executable(parserTest ${SOURCES})
 target_link_libraries(parserTest
-        TfUtilsLib
-        #Boost::program_options
+        TfUtils
+        TfTools
         Boost::unit_test_framework)

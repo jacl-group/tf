@@ -9,6 +9,7 @@ I am trying to follow the standard I am most use to seeing.
 1. The application is in the `app` directory. It contains a `CMakeLists.txt` 
 and `src` and `include` directories as needed.
 1. Each library is in it's own directory. Each library directory contains a `CMakeLists.txt` file and it `src` and `include` directories.
+
 ```bash
     tf
     └── src

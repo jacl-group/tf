@@ -4,8 +4,8 @@
 
 #include <iostream>
 
-#include "../TfTools/include/TfUtils/TfOptions.hpp"
-#include "../TfUtils/include/TfUtils/BoostParser.hpp"
+#include "TfTools/TfOptions.hpp"
+#include "TfUtils/BoostParser.hpp"
 
 // Use unit tests .so library
 // and
