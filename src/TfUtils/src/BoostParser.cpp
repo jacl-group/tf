@@ -54,7 +54,7 @@ string BoostParser::getDesc() const
 // parse() parsed the command line from main() and stores the results into options.
 //
 void BoostParser::parse(int ac, char** av, TfOptions& options) {
-#if 1
+#if 0
     cout << "ac: " << ac << endl;
     for(char** p=av; p < (av+ac); ++p) {
         cout << "\t" << *p << endl;

@@ -31,6 +31,10 @@ int main(int ac, char** av)
     // Use by the command line parser to send options to be executed.
     TfOptions options;
 
+    // Create an array containing av
+    vector<string> argv(ac);
+    copy(av, (av+ac), argv.begin());
+
     // Create a command line parser, and populate it.
     int result;
     BoostParser parser;

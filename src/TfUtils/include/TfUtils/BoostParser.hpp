@@ -5,6 +5,7 @@
 #ifndef TRASH_FILE_BOOSTPARSER_HPP
 #define TRASH_FILE_BOOSTPARSER_HPP
 
+#include <vector>
 #include <TfTools/TfOptions.hpp>
 
 namespace boost {
@@ -18,7 +19,8 @@ class BoostParser
 public:
     BoostParser();
 
-    void parse(int ac, char** av, TfOptions& options);
+    void parse(int ac, char**av, TfOptions& options);
+
     std::string getDesc() const;
 
 protected:
