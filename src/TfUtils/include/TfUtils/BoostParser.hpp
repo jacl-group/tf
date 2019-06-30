@@ -18,13 +18,14 @@ class BoostParser
 {
 public:
     BoostParser();
+    BoostParser(const BoostParser&) = delete;
+    BoostParser& operator=(const BoostParser&) = delete;
 
     void parse(int ac, char**av, TfOptions& options);
 
     std::string getDesc() const;
 
 protected:
-    boost::program_options::options_description* options_;
     static boost::program_options::options_description desc_;
 };
 

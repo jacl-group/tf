@@ -29,14 +29,15 @@ class TfOptions {
 public:
     bool help;              // --help
     bool version;           // --version
-    bool forced;            // --forced, -f
+    bool force;             // --force, -f
     bool always;            // -i
     bool once;              // -I
     bool interactive;       // --interactive[=WHEN]
                             //      once (-I)
                             //      always
                             //      never
-    bool preserve;          // preserve-root
+    bool oneFileSystem;     // --one-file-system
+    bool preserve;          // --preserve-root
     bool recursive;         // --recursive, -R, -r
     bool verbose;           // --verbose, -v
     bool empty;             // --trash-empty, -e
@@ -47,7 +48,16 @@ public:
 
 
     TfOptions();
+
+    // Prevent Copying TfOptions
+    TfOptions(const TfOptions&) = delete;
+    TfOptions&operator=(const TfOptions&) = delete;
+
+    // Comparison operator
     bool operator==(const TfOptions & rhs);
+
+    // Output inserter
+    friend std::ostream& operator<<(std::ostream&, const TfOptions &rhs);
 };
 
 

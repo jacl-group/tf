@@ -17,10 +17,14 @@
 
 #include <TfTools/TfOptions.hpp>
 
+#include <iostream>
+
+using std::endl;
+
 TfOptions::TfOptions() :
     help(false),
     version(false),
-    forced(false),
+    force(false),
     always(false),
     once(false),
     interactive(false),
@@ -39,7 +43,7 @@ bool TfOptions::operator==(const TfOptions& rhs) {
     bool same = true;
     same &= help == rhs.help;
     same &= version == rhs.version;
-    same &= forced == rhs.forced;
+    same &= force == rhs.force;
     same &= always == rhs.always;
     same &= once == rhs.once;
     same &= interactive == rhs.interactive;
@@ -52,8 +56,26 @@ bool TfOptions::operator==(const TfOptions& rhs) {
     same &= desc == rhs.desc;
     for (auto i = 0; i < files.size(); ++i) {
         if (files[i] != rhs.files[i]) {
+            std::cout << "\t" << files[i] << " != " << rhs.files[i] << "\n";
             return false;
+        } else {
+            std::cout << "\t" << files[i] << " == " << rhs.files[i] << "\n";
+
         }
     }
     return same;
+}
+
+std::ostream& operator<<(std::ostream& os, const TfOptions &rhs) {
+    os << "help: \t\t"  << rhs.help    << endl;
+    os << "version: \t" << rhs.version << endl;
+    os << "... not fully implemented" << endl;
+    if(rhs.files.size()) {
+        os << "files:" << endl;
+        for(auto f : rhs.files) {
+            os << "\t" << f << endl;
+        }
+    }
+
+    return os;
 }

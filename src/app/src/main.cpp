@@ -20,6 +20,7 @@
 #include <TfTools/TfTools.hpp>
 #include "TfUtils/BoostParser.hpp"
 #include "TfUtils/TfUtils.hpp"
+#include <TfUtils/ShowType.hpp>
 
 namespace po = boost::program_options;
 
@@ -43,11 +44,17 @@ int main(int ac, char** av)
     } catch(const boost::program_options::unknown_option& e) {
         // Unknown Option found
         cerr << "Unknown Option: " << e.get_option_name() << endl;
+        return -1;
     } catch(const boost::program_options::multiple_occurrences& e) {
         // Option repeated
         cerr << e.what() << endl;
+        return -1;
+    } catch(const po::error& e) {
+        cerr << "error: " << e.what() << endl;
+        showType(e);
     } catch(...) {
         cerr << "Unexpected Exception" << endl;
+        return -1;
     }
 
     // Do Help and exit
@@ -61,6 +68,9 @@ int main(int ac, char** av)
         version();
         return 0;
     }
+
+    // Print the options
+    //cout << "options: " << endl << options << endl;
 
     // Run command
     return TfTools().run(options);

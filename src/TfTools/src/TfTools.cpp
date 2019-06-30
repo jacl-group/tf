@@ -10,4 +10,5 @@ TfTools::TfTools()
 int TfTools::run(const TfOptions &options)
 {
 
+    return 0;
 }
