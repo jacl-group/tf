@@ -15,4 +15,8 @@ add_executable(parserTest ${SOURCES})
 target_link_libraries(parserTest
         TfUtils
         TfTools
-        Boost::unit_test_framework)
+        Boost::unit_test_framework
+        Boost::log
+        Boost::thread
+        Threads::Threads
+        )

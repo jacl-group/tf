@@ -12,4 +12,8 @@ message("\ntf SOURCES: ${SOURCES}\n")
 add_executable(tf ${SOURCES})
 
 # Define the libraries this project depends upon
-target_link_libraries(tf TfUtils TfTools Boost::program_options)
+target_link_libraries(tf TfUtils TfTools
+        Boost::program_options
+        Boost::thread
+        Boost::log
+        )
